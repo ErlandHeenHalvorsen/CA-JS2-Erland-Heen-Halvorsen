@@ -43,3 +43,5 @@ export async function onLogin(event) {
     console.error("Login failed");
   }
 }
+
+export { checkEmail, checkPassword };
