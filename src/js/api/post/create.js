@@ -1,9 +1,10 @@
 import { headers } from "../../api/headers";
 import { API_SOCIAL_POSTS } from "../../api/constants";
-export async function createPost({ title, body, media }) {
+export async function createPost({ title, body, tags, media }) {
   const data = {
     title: title,
     body: body,
+    tags: tags.split(","),
     media: {
       url: media.url,
       alt: media.alt,

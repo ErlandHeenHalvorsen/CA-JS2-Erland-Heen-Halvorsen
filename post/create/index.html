@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,8 +8,36 @@
   </head>
   <body>
     <h1>Create Post</h1>
-
     <form name="createPost">
+      <div>
+        <label for="title">Title</label>
+        <input
+          id="title"
+          type="text"
+          name="title"
+          placeholder="Post Title"
+          required
+        />
+      </div>
+      <div>
+        <label for="body">Body</label>
+        <textarea
+          id="body"
+          name="body"
+          placeholder="Post Body"
+          maxlength="200"
+        ></textarea>
+      </div>
+      <div>
+        <label for="tags">Tags</label>
+        <input id="tags" type="text" name="tags" />
+      </div>
+      <div>
+        <label for="media">Media</label>
+        <input id="media" type="text" name="media" />
+        <input id="mediaAlt" type="text" name="mediaAlt" />
+      </div>
+
       <button>Create Post</button>
     </form>
   </body>
