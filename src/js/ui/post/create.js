@@ -5,21 +5,20 @@ console.log("hello from createPost");
 export async function onCreatePost(event) {
   event.preventDefault();
 
-  const title = event.target[0]?.value || "";
-  const body = event.target[1]?.value || "";
-  const tags = event.target[2]?.value || "";
-  const mediaUrl = event.target[3]?.value || "";
-  const mediaAlt = event.target[4]?.value || "";
+  const title = event.target[0]?.value;
+  const body = event.target[1]?.value;
+  const tags = event.target[2]?.value;
+  const mediaUrl = event.target[3]?.value;
+  const mediaAlt = event.target[4]?.value;
   const tagsArray = tags ? tags.split(",") : [];
 
   const createBody = {
-    title: title,
-    body: body,
-    tags: tagsArray,
-    media: {
-      url: mediaUrl,
-      alt: mediaAlt,
-    },
+    title,
+    ...(body && { body }),
+    ...(tagsArray.length > 0 && { tags: tagsArray }),
+    ...(mediaUrl && {
+      media: { url: mediaUrl, ...(mediaAlt && { alt: mediaAlt }) },
+    }),
   };
   console.log(createBody);
 
