@@ -4,7 +4,7 @@ export async function createPost({ title, body, tags, media }) {
   const data = {
     title: title,
     body: body,
-    tags: tags.split(","),
+    tags: tags,
     media: {
       url: media.url,
       alt: media.alt,
@@ -26,6 +26,6 @@ export async function createPost({ title, body, tags, media }) {
     console.log(res);
     return res;
   } catch (error) {
-    console.error(`Response status: ${result.status}: ${result.statusText} `);
+    console.error(`Response status: ${res.status}: ${res.statusText} `);
   }
 }
