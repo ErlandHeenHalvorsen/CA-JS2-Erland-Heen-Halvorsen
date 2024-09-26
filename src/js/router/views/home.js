@@ -1,5 +1,6 @@
 import { authGuard } from "../../utilities/authGuard";
 import { readPosts } from "../../api/post/read.js";
+import { setLogoutListener } from "../../ui/global/logout.js";
 authGuard();
 
 const params = new URLSearchParams(window.location.search);
@@ -10,4 +11,5 @@ async function renderPosts() {
   post.innerHTML = await readPosts();
 }
 renderPosts();
-console.log(renderPosts());
+
+setLogoutListener();

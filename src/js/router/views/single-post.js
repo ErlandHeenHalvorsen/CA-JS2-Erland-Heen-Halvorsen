@@ -6,5 +6,8 @@ authGuard();
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-let singlePost = await readPost(id);
-console.log(singlePost);
+async function renderPost() {
+  const singlePost = document.querySelector(".singlePost");
+  singlePost.innerHTML = await readPost(id);
+}
+renderPost();
