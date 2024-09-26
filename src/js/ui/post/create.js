@@ -12,6 +12,8 @@ export async function onCreatePost(event) {
   const mediaAlt = event.target[4]?.value;
   const tagsArray = tags ? tags.split(",") : [];
 
+  /// Koden sjekker etter elementer, og hvis den ikke finner setter den undefined.
+  /// Prøvde andre metoder, men api'et ga meg 400 på body.
   const createBody = {
     title,
     ...(body && { body }),

@@ -1,5 +1,5 @@
-import { register } from "../../api/auth/register";
-import { checkEmail, checkPassword } from "./login";
+import { register } from "../../api/auth/register.js";
+import { checkEmail, checkPassword } from "./login.js";
 console.log("Hello from Register.js");
 
 export async function onRegister(event) {
@@ -17,7 +17,7 @@ export async function onRegister(event) {
     return;
   }
 
-  let result = await register({ name, email, password });
+  let res = await register({ name, email, password });
 
-  console.log(result.data);
+  console.log(res);
 }

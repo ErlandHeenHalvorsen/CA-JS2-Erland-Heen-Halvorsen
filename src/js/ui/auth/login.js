@@ -1,4 +1,5 @@
 import { fetchLogin } from "../../api/auth/login";
+import { setUsername } from "../../utilities/localStorage";
 
 function checkEmail(email) {
   if (email.includes("@stud.noroff.no") || email.includes("@noroff.no")) {
@@ -38,6 +39,7 @@ export async function onLogin(event) {
 
   if (result.data.accessToken) {
     localStorage.setItem("token", result.data.accessToken);
+    setUsername(result.data.name);
     window.location.href = "/";
   } else {
     console.error("Login failed");
