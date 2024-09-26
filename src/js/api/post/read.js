@@ -1,5 +1,6 @@
 import { headers } from "../../api/headers.js";
 import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../../api/constants.js";
+import { getUsername } from "../../utilities/localStorage.js";
 
 export async function readPost(id) {
   try {
@@ -81,7 +82,24 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
     }
 
     let res = await response.json();
-    return res.data;
+    console.log(res.data);
+    let html = "";
+    res.data.map((post) => {
+      html += `
+        <div class="post" >
+          <a href="/post/single-post/?id=${
+            post.id
+          }" class="postTitleLink"> <h2>${post.title}</h2></a>
+          <p>${getUsername()}</p>
+          <img class ="post-image" src="${
+            post.media ? post.media.url : ""
+          }" alt="${post.title ? post.title : ""}" />
+          <span>${post.tags ? post.tags : ""}</span>
+          <button class="deletePost" data-id="${post.id}">Delete</button>
+        </div>
+        `;
+    });
+    return html;
   } catch (error) {
     console.error(`Response status: ${error.message}`);
   }
