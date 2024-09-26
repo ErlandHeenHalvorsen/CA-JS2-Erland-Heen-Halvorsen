@@ -13,22 +13,24 @@ let profilePosts = document.querySelector(".profilePosts");
 profileInfo.innerHTML = await readProfile(username);
 profilePosts.innerHTML = await readPostsByUser(username);
 
-/* document.querySelector(".deletePost").addEventListener("click", (e) => {
-  e.preventDefault();
-  const id = e.target.dataset.id;
-  //deletePost(id);
-  console.log(e.target.nextSibling.parentElement);
-  let parentElement = e.target.nextSibling.parentElement;
-  parentElement.remove();
-}); */
+let deleteBtn = document.querySelectorAll(".deletePost");
+let editBtn = document.querySelectorAll(".editPost");
 
-document.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (e.target.tagName === "BUTTON") {
+deleteBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
     const id = e.target.dataset.id;
     deletePost(id);
-    console.log("Button clicked!");
+
     let parentElement = e.target.nextSibling.parentElement;
     parentElement.remove();
-  }
+  });
+});
+
+editBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const id = e.target.dataset.id;
+    window.location.href = `/post/edit/?id=${id}`;
+  });
 });

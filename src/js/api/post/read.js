@@ -14,7 +14,7 @@ export async function readPost(id) {
     let res = await response.json();
     let post = res.data;
     console.log(post);
-    let html = `
+    /* let html = `
         <div class="post">
           <h2>${post.title}</h2>
           <img class ="post-image" src="${
@@ -23,9 +23,10 @@ export async function readPost(id) {
           <p>${post.body ? post.body : ""}</p>
           <span>${post.tags ? post.tags : ""}</span>
         </div>
-        `;
+        `; */
 
-    return html;
+    // return html;
+    return post;
   } catch (error) {
     console.error(`Response status: ${error.message}`);
   }
@@ -96,6 +97,7 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
           }" alt="${post.title ? post.title : ""}" />
           <span>${post.tags ? post.tags : ""}</span>
           <button class="deletePost" data-id="${post.id}">Delete</button>
+          <button class="editPost" data-id="${post.id}">Edit</button>
         </div>
         `;
     });
