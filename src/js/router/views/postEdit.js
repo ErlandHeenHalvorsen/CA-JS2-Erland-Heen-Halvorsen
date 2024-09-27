@@ -19,13 +19,13 @@ let formObject = {
   media: editMedia,
   alt: editAlt,
 };
-console.log(post);
+
 if (post) {
   editTitle.value = post.title;
   editBody.value = post.body;
   editTags.value = post.tags;
-  editMedia.value = post.media.url;
-  editAlt.value = post.media.alt;
+  editMedia.value = post.media?.url || "";
+  editAlt.value = post.media?.alt || "";
 }
 
 const form = document.forms.editPost;
