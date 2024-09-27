@@ -3,7 +3,7 @@ import { API_AUTH_LOGIN } from "../constants";
 import { headers } from "../headers";
 
 /**
- * Logs in a user with the provided email and password.
+ * Logs in a user with email and password.
  *
  * @param {Object} data Contains an email and password to log in with.
  * @param {string} data.email The email to log in with.
