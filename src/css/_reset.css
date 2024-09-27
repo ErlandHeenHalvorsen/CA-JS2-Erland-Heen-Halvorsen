@@ -10,3 +10,24 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
+
+.postCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  max-height: 700px;
+  height: fit-content;
+
+  border: 2px solid var(--ctaColor);
+  border-radius: 6px;
+  padding-bottom: 20px;
+  margin: 5px;
+  box-shadow: 2px 3px 8px black;
+  transition: ease 0.4s;
+}
+.post img {
+  object-fit: cover;
+  aspect-ratio: 16/8;
+  height: 267.4px;
+}
