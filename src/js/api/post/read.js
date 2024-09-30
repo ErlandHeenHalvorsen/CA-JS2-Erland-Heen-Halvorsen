@@ -2,6 +2,13 @@ import { headers } from "../../api/headers.js";
 import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../../api/constants.js";
 import { getUsername } from "../../utilities/localStorage.js";
 
+/**
+ * Reads a post with the given ID.
+ *
+ * @param {string} id The ID of the post to read.
+ *
+ * @returns {Promise<Object>} Resolves with the post on success, or rejects with an error on failure.
+ */
 export async function readPost(id) {
   try {
     const response = await fetch(`${API_SOCIAL_POSTS}/${id}`, {
@@ -21,6 +28,15 @@ export async function readPost(id) {
   }
 }
 
+/**
+ * Reads a list of posts from the API.
+ *
+ * @param {number} [limit=12] The number of posts to fetch.
+ * @param {number} [page=1] The page of posts to fetch.
+ * @param {string} [tag] The tag for which to fetch posts.
+ *
+ * @returns {Promise<string>} Resolves with a string of HTML for the posts on success, or rejects with an error on failure.
+ */
 export async function readPosts(limit = 12, page = 1, tag) {
   try {
     const response = await fetch(
