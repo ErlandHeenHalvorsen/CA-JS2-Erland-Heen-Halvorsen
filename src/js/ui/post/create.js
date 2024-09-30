@@ -4,6 +4,7 @@ console.log("hello from createPost");
 
 export async function onCreatePost(event) {
   event.preventDefault();
+  
 
   const title = event.target[0]?.value;
   const body = event.target[1]?.value;
