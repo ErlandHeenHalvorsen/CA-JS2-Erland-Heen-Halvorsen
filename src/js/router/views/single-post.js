@@ -11,9 +11,13 @@ async function renderPost() {
   let html = `
           <div class="post">
             <h2>${post.title}</h2>
-            <img class ="post-image" src="${
-              post.media ? post.media.url : ""
-            }" alt="${post.title ? post.title : ""}" />
+            ${
+              post.media && post.media.url
+                ? `<img class="post-image" src="${post.media.url}" alt="${
+                    post.media.alt ? post.media.alt : ""
+                  }" />`
+                : ""
+            }
             <p>${post.body ? post.body : ""}</p>
             <span>${post.tags ? post.tags : ""}</span>
           </div>

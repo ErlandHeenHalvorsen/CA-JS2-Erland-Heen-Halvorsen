@@ -59,9 +59,13 @@ export async function readPosts(limit = 12, page = 1, tag) {
             post.id
           }" class="postTitleLink"> <h2>${post.title}</h2></a>
           <p>${post.author.name}</p>
-          <img class ="post-image" src="${
-            post.media ? post.media.url : ""
-          }" alt="${post.title ? post.title : ""}" />
+           ${
+             post.media && post.media.url
+               ? `<img class="post-image" src="${post.media.url}" alt="${
+                   post.media.alt ? post.media.alt : ""
+                 }" />`
+               : ""
+           }
           <span>${post.tags ? post.tags : ""}</span>
         </div>
         `;
@@ -96,9 +100,13 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
             post.id
           }" class="postTitleLink"> <h2>${post.title}</h2></a>
           <p>${getUsername()}</p>
-          <img class ="post-image" src="${
-            post.media ? post.media.url : ""
-          }" alt="${post.title ? post.title : ""}" />
+           ${
+             post.media && post.media.url
+               ? `<img class="post-image" src="${post.media.url}" alt="${
+                   post.media.alt ? post.media.alt : ""
+                 }" />`
+               : ""
+           }
           <span>${post.tags ? post.tags : ""}</span>
           <button class="deletePost" data-id="${post.id}">Delete</button>
           <button class="editPost" data-id="${post.id}">Edit</button>
