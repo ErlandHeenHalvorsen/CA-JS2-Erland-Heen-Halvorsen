@@ -22,7 +22,7 @@ export async function updatePost(id, bodyObj) {
       throw new Error(result.status);
     }
     const res = await result.json();
-    console.log(res);
+
     return res.data;
   } catch (error) {
     console.error(`Response status: ${error.message}`);

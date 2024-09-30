@@ -1,10 +1,7 @@
 import { createPost } from "../../api/post/create.js";
 
-console.log("hello from createPost");
-
 export async function onCreatePost(event) {
   event.preventDefault();
-  
 
   const title = event.target[0]?.value;
   const body = event.target[1]?.value;
@@ -23,7 +20,6 @@ export async function onCreatePost(event) {
       media: { url: mediaUrl, ...(mediaAlt && { alt: mediaAlt }) },
     }),
   };
-  console.log(createBody);
 
   try {
     const post = await createPost(createBody);

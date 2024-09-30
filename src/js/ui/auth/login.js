@@ -22,8 +22,6 @@ function checkPassword(password) {
 export async function onLogin(event) {
   event.preventDefault();
 
-  //console.log(event.target[0].value + " " + event.target[1].value);
-
   const email = event.target[0].value;
   const password = event.target[1].value;
   const emailValid = checkEmail(email);
@@ -34,8 +32,6 @@ export async function onLogin(event) {
   }
 
   let result = await fetchLogin({ email, password });
-
-  console.log(result.data);
 
   if (result.data.accessToken) {
     localStorage.setItem("token", result.data.accessToken);

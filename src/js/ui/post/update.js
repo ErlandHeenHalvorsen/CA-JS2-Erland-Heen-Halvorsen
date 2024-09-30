@@ -2,8 +2,6 @@ import { updatePost } from "../../api/post/update";
 
 export async function onUpdatePost(event, formObject, id) {
   event.preventDefault();
-  console.log(event);
-  console.log(formObject.tags.value);
 
   const title = formObject.title.value;
   const body = formObject.body.value;

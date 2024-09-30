@@ -20,7 +20,7 @@ export async function createPost(createBody) {
       headers: headers(),
       body: JSON.stringify(createBody),
     });
-    console.log(result);
+
     if (!result.ok) {
       throw new Error(result.status);
     }

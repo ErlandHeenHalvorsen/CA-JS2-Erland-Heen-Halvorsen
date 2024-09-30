@@ -20,7 +20,6 @@ export async function readPost(id) {
     }
     let res = await response.json();
     let post = res.data;
-    console.log(post);
 
     return post;
   } catch (error) {
@@ -88,7 +87,7 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
     }
 
     let res = await response.json();
-    console.log(res.data);
+
     let html = "";
     res.data.map((post) => {
       html += `
