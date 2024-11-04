@@ -1,6 +1,6 @@
 import { onLogout } from "../../ui/auth/logout";
 
-const logoutBtn = document.querySelector(".logout");
+const logoutBtn = document.getElementById("logout");
 
 export function setLogoutListener() {
   logoutBtn.addEventListener(

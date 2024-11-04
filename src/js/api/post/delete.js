@@ -1,7 +1,6 @@
 import { headers } from "../headers";
 import { API_SOCIAL_POSTS } from "../constants";
 
-
 /**
  * Deletes a post with the given ID.
  *
