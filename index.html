@@ -10,20 +10,22 @@
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 
-<body class="bg-gray-800 text-gray-50 font-sans">
-  <header class="">
-    <div class="container mx-auto flex justify-between items-center p-4 md:p-6 lg:p-8">
+<body class="bg-gray-600 text-gray-50 font-sans">
+  <header class="bg-gray-800">
+    <div class="container mx-auto flex justify-between items-center p-4 md:p-6 lg:p-8 ">
       <div>
-        <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+        <a class="hover:scale-105" href="/">
+          <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+        </a>
       </div>
       <!-- Desktop Menu -->
       <div class="text-xl">
         <nav class="hidden md:block">
-          <a class="py-2 m-1 hover:text-gray-400 transition-all duration-300" href="/">Home</a>
-          <a class="p-4 m-1" href="/profile/">Profile</a>
-          <a class="p-4 m-1" href="/auth/login/">Login</a>
-          <a class="p-4 m-1" href="/auth/register/">Register</a>
-          <a class="p-4 m-1" href="/post/create/">Post</a>
+          <a class="custom-nav" href="/">Home</a>
+          <a class="custom-nav" href="/profile/">Profile</a>
+          <a class="custom-nav" href="/auth/login/">Login</a>
+          <a class="custom-nav" href="/auth/register/">Register</a>
+          <a class="custom-nav" href="/post/create/">Post</a>
           <button title="Logout" id="logout" class="">Logout</button>
         </nav>
         <!-- SVG -->
@@ -39,19 +41,19 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="bg-gray-800 m-0 md:hidden">
       <nav class="flex flex-col text-center space-y-2 p-4">
-        <a class="block px-4" href="/">Home</a>
-        <a class="block px-4" href="/profile/">Profile</a>
-        <a class="block px-4" href="/auth/login/">Login</a>
-        <a class="block px-4" href="/auth/register/">Register</a>
-        <a class="block px-4" href="/post/create/">Post</a>
-        <button title="Logout" id="logout" class="block px-4">Logout</button>
+        <a class="custom-nav-mobile" href="/">Home</a>
+        <a class="custom-nav-mobile" href="/profile/">Profile</a>
+        <a class="custom-nav-mobile" href="/auth/login/">Login</a>
+        <a class="custom-nav-mobile" href="/auth/register/">Register</a>
+        <a class="custom-nav-mobile" href="/post/create/">Post</a>
+        <button title="Logout" id="logout" class="p-1 w-fit relative left-1 rounded bg-orange-700">Logout</button>
       </nav>
     </div>
   </header>
   <hr>
   </hr>
-  <section id="posts" class="bg-gray-600 flex flex-col"></section>
-  <footer class="p-4 text-center sticky">
+  <section id="posts" class="flex flex-wrap justify-center"></section>
+  <footer class="bg-gray-800 p-8  text-center sticky">
     something
   </footer>
 </body>
