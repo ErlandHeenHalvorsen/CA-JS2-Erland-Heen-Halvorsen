@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 .custom-nav {
-  @apply py-2 m-1 hover:text-gray-400 transition-all duration-300;
+  @apply text-white py-2 m-1 ml-6 hover:text-gray-400 transition-all duration-300;
 }
-.custom-nav-mobile {
-  @apply flex text-lg bg-gray-700 p-1 m-1 border rounded;
+#mobile-menu .custom-nav {
+  @apply flex text-lg text-white bg-gray-700 p-1 m-1 border rounded;
+}
+.cta-custom {
+  @apply mr-4 my-4 p-1 h-fit w-14 min-w-fit text-center  rounded bg-orange-700 hover:bg-orange-800;
 }

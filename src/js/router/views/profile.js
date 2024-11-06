@@ -8,13 +8,13 @@ authGuard();
 
 const username = getUsername();
 
-let profileInfo = document.querySelector(".profileInfo");
-let profilePosts = document.querySelector(".profilePosts");
+let profileInfo = document.getElementById("profileInfo");
+let profilePosts = document.getElementById("profilePosts");
 profileInfo.innerHTML = await readProfile(username);
 profilePosts.innerHTML = await readPostsByUser(username);
 
-let deleteBtn = document.querySelectorAll(".deletePost");
-let editBtn = document.querySelectorAll(".editPost");
+let deleteBtn = document.querySelectorAll("#deletePost");
+let editBtn = document.querySelectorAll("#editPost");
 
 deleteBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {

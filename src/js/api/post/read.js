@@ -66,11 +66,11 @@ export async function readPosts(limit = 12, page = 1, tag) {
                 }
               </div>
             <div class="text-2xl my-2 first-letter:capitalize">
-              <h2 class="font-bold">${post.title}</h2>  
+              <h2 class="font-bold truncate">${post.title}</h2>  
             </div>
             <div class="flex flex-col">
               <p>${post.author.name}</p>
-              <span class="bg-gray-600 px-1 rounded-sm  w-fit">${post.tags && post.tags.length ? post.tags : `No Tags`}</span>
+              <span class="bg-gray-600 px-1 rounded-sm  w-fit truncate">${post.tags && post.tags.length ? post.tags : `No Tags`}</span>
             </div>
           
           </container>
@@ -102,22 +102,32 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
     let html = "";
     res.data.map((post) => {
       html += `
-        <div class="post" >
-          <a href="/post/single-post/?id=${
-            post.id
-          }" class="postTitleLink"> <h2>${post.title}</h2></a>
-          <p>${getUsername()}</p>
-           ${
-             post.media && post.media.url
-               ? `<img class="post-image" src="${post.media.url}" alt="${
-                   post.media.alt ? post.media.alt : ""
-                 }" />`
-               : ""
-           }
-          <span>${post.tags ? post.tags : ""}</span>
-          <button class="deletePost" data-id="${post.id}">Delete</button>
-          <button class="editPost" data-id="${post.id}">Edit</button>
-        </div>
+            <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-500 border border-gray-400 shadow-lg">
+                <a href="/post/single-post/?id=${post.id}" class="">
+                    <div>
+                        <div>
+                        ${
+                          post.media && post.media.url
+                            ? `<img class="object-cover w-full aspect-[4/3] rounded-t-lg h-84 md:h-96" src="${post.media.url}" alt="${
+                                post.media.alt ? post.media.alt : ""
+                              }" />`
+                            : `<img class="object-contain w-full aspect-[4/3] rounded-t-lg h-96" src="/public/images/noroff-logo.png" alt="Random image" />`
+                        }
+                        </div>
+                        <div class="text-2xl my-2 first-letter:capitalize">
+                            <h2 class="font-bold truncate">${post.title}</h2>  
+                        </div>
+                        <div class="flex flex-col">
+                            <p>${getUsername()}</p>
+                            <span class="bg-gray-600 px-1 rounded-sm  w-fit truncate">${post.tags ? post.tags : ""}</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="flex mt-4">
+                  <button id="deletePost" class="cta-custom" data-id="${post.id}">Delete</button>
+                  <button id="editPost" class="cta-custom" data-id="${post.id}">Edit</button>
+                </div>
+            </div>
         `;
     });
     return html;

@@ -4,3 +4,9 @@ export function authGuard() {
     window.location.href = "/auth/login/";
   }
 }
+export function authCheck() {
+  if (!localStorage.token) {
+    return false;
+  }
+  return true;
+}
