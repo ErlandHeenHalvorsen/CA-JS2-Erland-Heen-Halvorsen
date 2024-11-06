@@ -11,3 +11,7 @@
 .cta-custom {
   @apply mr-4 my-4 p-1 h-fit w-14 min-w-fit text-center  rounded bg-orange-700 hover:bg-orange-800;
 }
+
+#mobile-menu .cta-custom {
+  @apply mr-4 my-4 p-1 h-fit w-14 min-w-fit text-center  rounded bg-orange-700 hover:bg-orange-800;
+}

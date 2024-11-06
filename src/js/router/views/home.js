@@ -1,6 +1,5 @@
 import { authGuard } from "../../utilities/authGuard";
 import { readPosts } from "../../api/post/read.js";
-import { setLogoutListener } from "../../ui/global/logout.js";
 
 authGuard();
 
@@ -12,5 +11,3 @@ async function renderPosts() {
   post.innerHTML = await readPosts();
 }
 renderPosts();
-
-setLogoutListener();
