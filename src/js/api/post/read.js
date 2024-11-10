@@ -11,7 +11,7 @@ import { getUsername } from "../../utilities/localStorage.js";
  */
 export async function readPost(id) {
   try {
-    const response = await fetch(`${API_SOCIAL_POSTS}/${id}`, {
+    const response = await fetch(`${API_SOCIAL_POSTS}/${id}?&_author=true`, {
       method: "GET",
       headers: headers(),
     });
@@ -54,7 +54,7 @@ export async function readPosts(limit = 12, page = 1, tag) {
     let html = "";
     res.data.map((post) => {
       html += `
-      <a href="/post/single-post/?id=${post.id}" class="flex flex-col p-1 m-6 md:m-4 w-full max-w-md h-fit bg-gray-500 border border-gray-400 shadow-lg rounded-md hover:bg-gray-400 hover:scale-105 transition-all duration-200">  
+      <a href="/post/single-post/?id=${post.id}" class="flex flex-col p-1 m-6 md:m-4 w-full max-w-md h-fit bg-gray-800 border border-gray-600 shadow-lg rounded-md hover:bg-gray-900 hover:border-white hover:scale-105 transition-all duration-200">  
           <container class="">
               <div>
                 ${
@@ -102,7 +102,7 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
     let html = "";
     res.data.map((post) => {
       html += `
-            <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-500 border border-gray-400 shadow-lg">
+            <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-800 border border-gray-400 shadow-lg">
                 <a href="/post/single-post/?id=${post.id}" class="">
                     <div>
                         <div>
@@ -125,7 +125,7 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
                 </a>
                 <div class="flex mt-4">
                   <button id="deletePost" class="cta-custom" data-id="${post.id}">Delete</button>
-                  <button id="editPost" class="cta-custom" data-id="${post.id}">Edit</button>
+                  <button id="editPost" class="register-custom" data-id="${post.id}">Edit</button>
                 </div>
             </div>
         `;

@@ -40,8 +40,8 @@ export default class NavBar extends HTMLElement {
   loggedOutMenu() {
     return `
         <a class="custom-nav" href="/">Home</a>
-        <a class="custom-nav" href="/auth/login/">Login</a>
-        <a class="custom-nav" href="/auth/register/">Register</a>
+        <a class="cta-custom" href="/auth/login/">Login</a>
+        <a class="register-custom" href="/auth/register/">Register</a>
             
     `;
   }

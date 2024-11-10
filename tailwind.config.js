@@ -8,6 +8,12 @@ export default {
     "./post/**/*.{html}",
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        serif: ["Merriweather", "serif"],
+      },
+    },
     screens: {
       sm: "640px",
       md: "960px",

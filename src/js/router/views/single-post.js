@@ -5,10 +5,11 @@ import { getUsername } from "../../utilities/localStorage.js";
 authGuard();
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
+const author = params.get("author");
 
 async function renderPost() {
   const singlePost = document.querySelector("#singlePost");
-  const post = await readPost(id);
+  const post = await readPost(id, author);
   let html = `
            <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-500 border border-gray-400 shadow-lg">
                 <a href="/post/single-post/?id=${post.id}" class="">
@@ -26,17 +27,13 @@ async function renderPost() {
                             <h2 class="font-bold truncate">${post.title}</h2>  
                         </div>
                         <div class="flex flex-col">
-                            <p>${getUsername()}</p>
+                            <p>${post.author.name ? post.author.name : ""}</p>
                             <span class="bg-gray-600 px-1 rounded-sm  w-fit truncate">${post.tags ? post.tags : ""}</span>
                         </div>
                         <div class="flex flex-wrap">
                             <p>${post.body ? post.body : ""}</p>
                     </div>
                 </a>
-                <div class="flex mt-4">
-                  <button id="deletePost" class="cta-custom" data-id="${post.id}">Delete</button>
-                  <button id="editPost" class="cta-custom" data-id="${post.id}">Edit</button>
-                </div>
             </div>
           `;
   singlePost.innerHTML = html;
