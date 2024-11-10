@@ -3,6 +3,11 @@ import { readPostsByUser } from "../../api/post/read";
 import { getUsername } from "../../utilities/localStorage";
 import { readProfile } from "../../api/profile/read";
 import { deletePost } from "../../api/post/delete";
+import NavBar from "../../ui/global/navBar.js";
+import FooterSection from "../../ui/global/footer.js";
+
+customElements.define("nav-bar", NavBar);
+customElements.define("footer-section", FooterSection);
 
 authGuard();
 

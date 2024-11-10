@@ -1,5 +1,10 @@
 import { authGuard } from "../../utilities/authGuard";
 import { readPosts } from "../../api/post/read.js";
+import NavBar from "../../ui/global/navBar.js";
+import FooterSection from "../../ui/global/footer.js";
+
+customElements.define("nav-bar", NavBar);
+customElements.define("footer-section", FooterSection);
 
 authGuard();
 

@@ -1,0 +1,1 @@
+import{N as e,F as o,a}from"./footer-9LuT4zIi.js";import{r as s}from"./read-CbWCaibj.js";import"./headers-CvLIB_Db.js";customElements.define("nav-bar",e);customElements.define("footer-section",o);a();const n=new URLSearchParams(window.location.search);n.get("id");async function r(){const t=document.getElementById("posts");t.innerHTML=await s()}r();

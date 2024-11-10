@@ -1,6 +1,11 @@
 import { readPost } from "../../api/post/read.js";
 import { authGuard } from "../../utilities/authGuard.js";
 import { getUsername } from "../../utilities/localStorage.js";
+import NavBar from "../../ui/global/navBar.js";
+import FooterSection from "../../ui/global/footer.js";
+
+customElements.define("nav-bar", NavBar);
+customElements.define("footer-section", FooterSection);
 
 authGuard();
 const params = new URLSearchParams(window.location.search);

@@ -3,9 +3,9 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.js",
-    "./auth/**/*.{html}",
-    "./profile/**/*.{html}",
-    "./post/**/*.{html}",
+    "./auth/**/*.html",
+    "./profile/**/*.html",
+    "./post/**/*.html",
   ],
   theme: {
     extend: {

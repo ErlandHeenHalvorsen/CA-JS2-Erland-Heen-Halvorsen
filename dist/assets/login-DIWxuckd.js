@@ -1,0 +1,1 @@
+import{o}from"./login-7ZMM9IQg.js";import{N as e,F as t}from"./footer-9LuT4zIi.js";import"./headers-CvLIB_Db.js";customElements.define("nav-bar",e);customElements.define("footer-section",t);const n=document.forms.login;n.addEventListener("submit",o);
