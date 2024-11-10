@@ -1,0 +1,1 @@
+import{a}from"./app-BJZ4ADGI.js";import{r as o}from"./read-Cmqt6XaH.js";import"./headers-CvLIB_Db.js";a();const r=new URLSearchParams(window.location.search);r.get("id");async function s(){const t=document.getElementById("posts");t.innerHTML=await o()}s();
