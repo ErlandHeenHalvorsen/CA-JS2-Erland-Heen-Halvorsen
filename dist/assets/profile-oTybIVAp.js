@@ -1,4 +1,4 @@
-import{a as n,g as l}from"./app-BJZ4ADGI.js";import{b as i}from"./read-Cmqt6XaH.js";import{c,h as s,b as d}from"./headers-CvLIB_Db.js";async function m(r){try{const e=await fetch(`${c}/${r}`,{method:"GET",headers:s()});if(!e.ok)throw new Error(e.message);let t=(await e.json()).data;return`
+import{a as n,g as l}from"./app-BaMvJEGb.js";import{b as i}from"./read-BsPZQNZb.js";import{c,h as s,b as d}from"./headers-CvLIB_Db.js";async function m(r){try{const e=await fetch(`${c}/${r}`,{method:"GET",headers:s()});if(!e.ok)throw new Error(e.message);let t=(await e.json()).data;return`
 
     <img class="banner" src="${t.banner?t.banner.url:""}" alt="${t.name?t.name:""}" />
     <div class="p-4">

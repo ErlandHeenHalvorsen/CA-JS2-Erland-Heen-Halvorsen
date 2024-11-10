@@ -1,4 +1,4 @@
-import{a as o}from"./read-Cmqt6XaH.js";import{a as l}from"./app-BJZ4ADGI.js";import"./headers-CvLIB_Db.js";l();const t=new URLSearchParams(window.location.search),d=t.get("id");t.get("author");async function i(){const e=document.querySelector("#singlePost"),a=await o(d);let s=`
+import{a as o}from"./read-BsPZQNZb.js";import{a as l}from"./app-BaMvJEGb.js";import"./headers-CvLIB_Db.js";l();const t=new URLSearchParams(window.location.search),d=t.get("id");t.get("author");async function i(){const e=document.querySelector("#singlePost"),a=await o(d);let s=`
            <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-800 border border-gray-400 shadow-lg">
                 <a href="/post/single-post/?id=${a.id}" class="">
                     <div>
