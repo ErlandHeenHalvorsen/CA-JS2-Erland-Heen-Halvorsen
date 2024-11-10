@@ -21,10 +21,10 @@
   @apply font-serif text-gray-200 text-lg hover:text-white mr-4 my-2 p-1 h-fit w-20 min-w-fit text-center  rounded bg-orange-700 hover:bg-orange-800;
 }
 .register-custom {
-  @apply font-serif text-gray-200 text-lg hover:text-white mr-4 my-4 p-1 h-fit w-20 min-w-fit text-center  rounded bg-blue-700 hover:bg-blue-800;
+  @apply font-serif text-gray-200 text-lg hover:text-white mr-4 my-4 p-1 h-fit w-20 min-w-fit text-center  rounded bg-green-700 hover:bg-green-800;
 }
 #mobile-menu .register-custom {
-  @apply font-serif text-gray-200 text-lg hover:text-white mr-4 my-2 p-1 h-fit w-20 min-w-fit text-center  rounded bg-blue-700 hover:bg-blue-800;
+  @apply font-serif text-gray-200 text-lg hover:text-white mr-4 my-2 p-1 h-fit w-20 min-w-fit text-center  rounded bg-green-700 hover:bg-green-800;
 }
 
 /* FORMS */

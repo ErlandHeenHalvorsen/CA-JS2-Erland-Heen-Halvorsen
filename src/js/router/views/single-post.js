@@ -11,7 +11,7 @@ async function renderPost() {
   const singlePost = document.querySelector("#singlePost");
   const post = await readPost(id, author);
   let html = `
-           <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-500 border border-gray-400 shadow-lg">
+           <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-800 border border-gray-400 shadow-lg">
                 <a href="/post/single-post/?id=${post.id}" class="">
                     <div>
                         <div>
