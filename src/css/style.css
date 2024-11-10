@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .custom-nav {
-  @apply text-white py-2 m-1 ml-6 hover:text-gray-400 transition-all duration-300;
+  @apply text-white text-2xl py-2 mx-4 hover:text-gray-400 transition-all duration-300;
 }
 #mobile-menu .custom-nav {
   @apply flex text-lg text-white bg-gray-700 p-1 m-1 border rounded;

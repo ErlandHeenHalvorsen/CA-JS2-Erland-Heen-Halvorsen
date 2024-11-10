@@ -5,6 +5,7 @@ export default {
     "./src/**/*.js",
     "./auth/**/*.{html}",
     "./profile/**/*.{html}",
+    "./post/**/*.{html}",
   ],
   theme: {
     screens: {
