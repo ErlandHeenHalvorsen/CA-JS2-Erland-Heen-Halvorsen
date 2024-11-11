@@ -62,7 +62,7 @@ export async function readPosts(limit = 12, page = 1, tag) {
                     ? `<img class="object-cover w-full aspect-[4/3] rounded-t-lg h-84 md:h-96" src="${post.media.url}" alt="${
                         post.media.alt ? post.media.alt : ""
                       }" />`
-                    : `<img class="object-contain w-full aspect-[4/3] rounded-t-lg h-96" src="/public/images/noroff-logo.png" alt="Random image" />`
+                    : `<img class="object-contain w-full aspect-[4/3] rounded-t-lg h-96" src="/images/noroff-logo.png" alt="Random image" />`
                 }
               </div>
             <div class="text-2xl my-2 first-letter:capitalize">
@@ -111,7 +111,7 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
                             ? `<img class="object-cover w-full aspect-[4/3] rounded-t-lg h-84 md:h-96" src="${post.media.url}" alt="${
                                 post.media.alt ? post.media.alt : ""
                               }" />`
-                            : `<img class="object-contain w-full aspect-[4/3] rounded-t-lg h-96" src="/public/images/noroff-logo.png" alt="Random image" />`
+                            : `<img class="object-contain w-full aspect-[4/3] rounded-t-lg h-96" src="/images/noroff-logo.png" alt="Random image" />`
                         }
                         </div>
                         <div class="text-2xl my-2 first-letter:capitalize">

@@ -1,4 +1,4 @@
-import{N as n,F as l,a as i,g as c}from"./footer-9LuT4zIi.js";import{b as d}from"./read-CbWCaibj.js";import{c as m,h as a,b as f}from"./headers-CvLIB_Db.js";async function u(r){try{const e=await fetch(`${m}/${r}`,{method:"GET",headers:a()});if(!e.ok)throw new Error(e.message);let t=(await e.json()).data;return`
+import{N as n,F as l,a as i,g as c}from"./footer-9LuT4zIi.js";import{b as d}from"./read-C_5gpF-W.js";import{c as m,h as a,b as f}from"./headers-CvLIB_Db.js";async function u(r){try{const e=await fetch(`${m}/${r}`,{method:"GET",headers:a()});if(!e.ok)throw new Error(e.message);let t=(await e.json()).data;return`
 
     <img class="banner" src="${t.banner?t.banner.url:""}" alt="${t.name?t.name:""}" />
     <div class="p-4">
