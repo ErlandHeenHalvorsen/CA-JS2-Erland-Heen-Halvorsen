@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,13 +8,17 @@
     <script type="module" src="/src/app.js"></script>
   </head>
 
-  <body>
-    <h1>Register</h1>
+  <body class="body-custom">
+    <nav-bar></nav-bar>
 
-    <form name="register">
+    <form class="form-custom" name="register">
+      <div class="flex justify-center text-xl text-white">
+        <h1>Register</h1>
+      </div>
       <div>
-        <label for="name">Name</label>
+        <label class="label-custom" for="name">Name</label>
         <input
+          class="input-custom"
           id="name"
           type="text"
           name="name"
@@ -22,14 +26,14 @@
           maxlength="20"
           pattern="^[\w]+$"
           title="Please enter a username using only letters and numbers"
-          placeholder="Benny"
         />
       </div>
 
       <div>
-        <label for="email">Email</label>
+        <label class="label-custom" for="email">Email</label>
         <input
           id="email"
+          class="input-custom"
           type="email"
           name="email"
           required
@@ -40,19 +44,21 @@
       </div>
 
       <div>
-        <label for="password">Password</label>
+        <label class="label-custom" for="password">Password</label>
         <input
           type="password"
           name="password"
           id="password"
+          class="input-custom"
           required
           minlength="8"
           placeholder="xxxxxxxx"
         />
       </div>
-
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
+      <div class="flex">
+        <a class="cta-custom" href="/auth/login/">Login</a>
+        <button class="register-custom">Register</button>
+      </div>
     </form>
   </body>
 </html>

@@ -2,6 +2,11 @@ import { authGuard } from "../../utilities/authGuard";
 import { updatePost } from "../../api/post/update";
 import { readPost } from "../../api/post/read";
 import { onUpdatePost } from "../../ui/post/update";
+import NavBar from "../../ui/global/navBar.js";
+import FooterSection from "../../ui/global/footer.js";
+
+customElements.define("nav-bar", NavBar);
+customElements.define("footer-section", FooterSection);
 
 authGuard();
 const id = new URLSearchParams(window.location.search).get("id");

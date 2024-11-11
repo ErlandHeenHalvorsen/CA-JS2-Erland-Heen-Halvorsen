@@ -1,10 +1,36 @@
-# Prototype of Social Media, using Noroff API
+# Prototype of Social Media, using Noroff API and Tailwindcss
 
-## Netlify
+[Netlify](https://erlhal-css-frameworks.netlify.app)
 
-[netlify](https://glittery-daffodil-926843.netlify.app)
+## To get going:
 
-## Report
+1. Get dependencies:
+
+```
+npm install
+```
+
+2. Start dev server:
+
+```
+npm run dev:watch
+```
+
+3. Build project:
+
+```
+npm run build
+```
+
+## Report css-frameworks
+
+The project went mostly ok, but i met some issues at styling forms under the auth folder. i don't know why there were problems with these specific folders, but i solved it by using the @apply in the input css, where i could set styles externally. The project may look unorganized becuased i've used tailwind differently across the doc, but i didn't make the file structure, and i didnt bother with going back and changing all the previous work when meeting with this strange bug.
+
+Tailwind tells me my custom fonts are used, but they don't show in browser. i dont know why, and i don't have time to find out. (but i'm aware).
+
+The colors i've used are boring, but in my opinion matches the noroff logo. However, the task was to build a responsive ui, so that has been my focus. I failed to implement the footer to auth pages, because i couldn't get it to sit at the bottom like it does on the other pages. I also didn't want a sticky footer. So it looks a bit stupid, but the footer dosen't provide any functionality anyway.
+
+## Report JS 2
 
 I was tasked with creating a prototype for a social media app. The app was supposed to use Noroff's API, with the main focus on making POST, GET, PUT, and DELETE requests. We were also required to organize our project through GitHub Projects and document it using JSDoc.
 

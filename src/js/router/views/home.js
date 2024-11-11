@@ -1,15 +1,18 @@
 import { authGuard } from "../../utilities/authGuard";
 import { readPosts } from "../../api/post/read.js";
-import { setLogoutListener } from "../../ui/global/logout.js";
+import NavBar from "../../ui/global/navBar.js";
+import FooterSection from "../../ui/global/footer.js";
+
+customElements.define("nav-bar", NavBar);
+customElements.define("footer-section", FooterSection);
+
 authGuard();
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 async function renderPosts() {
-  const post = document.querySelector(".posts");
+  const post = document.getElementById("posts");
   post.innerHTML = await readPosts();
 }
 renderPosts();
-
-setLogoutListener();

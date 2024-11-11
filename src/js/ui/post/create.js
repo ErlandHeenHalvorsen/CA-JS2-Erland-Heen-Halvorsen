@@ -3,11 +3,11 @@ import { createPost } from "../../api/post/create.js";
 export async function onCreatePost(event) {
   event.preventDefault();
 
-  const title = event.target[0]?.value;
-  const body = event.target[1]?.value;
-  const tags = event.target[2]?.value;
-  const mediaUrl = event.target[3]?.value;
-  const mediaAlt = event.target[4]?.value;
+  const title = document.querySelector("#title")?.value;
+  const body = document.querySelector("#body")?.value;
+  const tags = document.querySelector("#tags")?.value;
+  const mediaUrl = document.querySelector("#media")?.value;
+  const mediaAlt = document.querySelector("#mediaAlt")?.value;
   const tagsArray = tags ? tags.split(",") : [];
 
   /// Koden sjekker etter elementer, og hvis den ikke finner setter den undefined.
@@ -27,6 +27,7 @@ export async function onCreatePost(event) {
       throw new Error("Post not created");
     } else {
       console.log(post);
+      alert("Post created!");
     }
   } catch (error) {
     console.error("error creating post", error);

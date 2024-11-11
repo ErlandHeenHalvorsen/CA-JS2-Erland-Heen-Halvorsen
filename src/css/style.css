@@ -1,1 +1,45 @@
-@import url(_reset.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Kanit:wght@400;700&display=swap");
+
+.body-custom {
+  @apply font-sans bg-gray-700 text-white antialiased;
+}
+.custom-nav {
+  @apply font-sans text-white text-2xl py-2 mx-4 hover:text-gray-400 transition-all duration-300;
+}
+#mobile-menu .custom-nav {
+  @apply flex text-lg text-white bg-gray-700 p-1 m-0 mb-2 w-1/2 min-w-fit border rounded;
+}
+.cta-custom {
+  @apply font-sans text-gray-200 text-lg hover:text-white mr-4 my-4 p-1 h-fit w-20 min-w-fit text-center  rounded bg-orange-700 hover:bg-orange-800;
+}
+
+#mobile-menu .cta-custom {
+  @apply font-sans text-gray-200 text-lg hover:text-white mr-4 my-2 p-1 h-fit w-20 min-w-fit text-center  rounded bg-orange-700 hover:bg-orange-800;
+}
+.register-custom {
+  @apply font-sans text-gray-200 text-lg hover:text-white mr-4 my-4 p-1 h-fit w-20 min-w-fit text-center  rounded bg-green-700 hover:bg-green-800;
+}
+#mobile-menu .register-custom {
+  @apply font-sans text-gray-200 text-lg hover:text-white mr-4 my-2 p-1 h-fit w-20 min-w-fit text-center  rounded bg-green-700 hover:bg-green-800;
+}
+
+/* FORMS */
+.form-custom {
+  @apply max-w-md mx-auto bg-gray-800 p-6 m-4 border border-gray-500  rounded-lg shadow-lg;
+}
+.label-custom {
+  @apply block mb-2 text-lg font-medium text-white;
+}
+.input-custom {
+  @apply w-full px-4 py-2 bg-gray-400 border border-gray-300 text-white text-sm rounded-lg outline-none focus:ring-blue-500 focus:border-blue-500;
+}
+.textarea-custom {
+  @apply w-full  px-4 py-2 text-sm text-white bg-gray-400 rounded-lg border outline-none border-gray-300 focus:ring-blue-500 focus:border-blue-500;
+}
+#createForm div {
+  @apply mb-4;
+}

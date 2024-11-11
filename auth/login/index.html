@@ -8,21 +8,37 @@
     <script type="module" src="/src/app.js"></script>
   </head>
 
-  <body>
-    <h1>Login</h1>
-    <form name="login">
+  <body class="body-custom">
+    <nav-bar></nav-bar>
+    <form name="login" class="form-custom">
+      <div class="flex justify-center text-xl text-white">
+        <h1>Login</h1>
+      </div>
       <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
+        <label for="email" class="label-custom">Email</label>
+        <input
+          id="email"
+          class="input-custom"
+          type="email"
+          name="email"
+          required
+        />
       </div>
 
       <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required />
+        <label for="password" class="label-custom">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="input-custom"
+          required
+        />
       </div>
-
-      <a href="/auth/register/">Register</a>
-      <button>Login</button>
+      <div class="flex flex-wrap">
+        <a href="/auth/register/" class="register-custom">Register</a>
+        <button class="cta-custom">Login</button>
+      </div>
     </form>
   </body>
 </html>

@@ -17,12 +17,19 @@ export async function readProfile(username) {
     let profile = res.data;
     let html = `
 
-    <h2>${profile.name}</h2>
     <img class="banner" src="${
       profile.banner ? profile.banner.url : ""
     }" alt="${profile.name ? profile.name : ""}" />
-    <p>${profile.email ? profile.email : ""}</p>
-    <p>${profile.bio ? profile.bio : ""}</p>
+    <div class="p-4">
+      <div class="flex flex-col">
+        <h1 class="font-bold text-xl">${profile.name}</h1>
+        <p class="">${profile.email ? profile.email : ""}</p>
+      </div>
+      <p>${profile.bio ? profile.bio : "This user has no bio"}</p>
+      <form name="updateProfile">
+        <button class="cta-custom">Update Profile</button>
+      </form>
+    </div>
     `;
 
     return html;

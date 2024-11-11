@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="/dist/styles.css" />
   </head>
-  <body>
-    <h1>Profile</h1>
-    <section class="profileInfo"></section>
-
-    <form name="updateProfile">
-      <button>Update Profile</button>
-    </form>
-
-    <section class="profilePosts"></section>
+  <body class="body-custom">
+    <nav-bar></nav-bar>
+    <section
+      id="profileInfo"
+      class="flex flex-col border-b border-gray-400 shadow-lg"
+    ></section>
+    <section
+      id="profilePosts"
+      class="flex flex-wrap justify-center p-4 m-4 shadow-lg"
+    ></section>
+    <footer-section></footer-section>
   </body>
 </html>

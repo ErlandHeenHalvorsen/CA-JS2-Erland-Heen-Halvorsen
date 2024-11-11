@@ -3,18 +3,23 @@ import { readPostsByUser } from "../../api/post/read";
 import { getUsername } from "../../utilities/localStorage";
 import { readProfile } from "../../api/profile/read";
 import { deletePost } from "../../api/post/delete";
+import NavBar from "../../ui/global/navBar.js";
+import FooterSection from "../../ui/global/footer.js";
+
+customElements.define("nav-bar", NavBar);
+customElements.define("footer-section", FooterSection);
 
 authGuard();
 
 const username = getUsername();
 
-let profileInfo = document.querySelector(".profileInfo");
-let profilePosts = document.querySelector(".profilePosts");
+let profileInfo = document.getElementById("profileInfo");
+let profilePosts = document.getElementById("profilePosts");
 profileInfo.innerHTML = await readProfile(username);
 profilePosts.innerHTML = await readPostsByUser(username);
 
-let deleteBtn = document.querySelectorAll(".deletePost");
-let editBtn = document.querySelectorAll(".editPost");
+let deleteBtn = document.querySelectorAll("#deletePost");
+let editBtn = document.querySelectorAll("#editPost");
 
 deleteBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {

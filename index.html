@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,20 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="./dist/styles.css" />
   </head>
 
-  <body>
-    <img src="public/images/noroff-logo.png" alt="Noroff Logo" />
-
-    <h1>Home</h1>
-
-    <a href="/profile/">My Profile</a>
-    <a href="/auth/login/">Login</a>
-    <a href="/auth/register/">Register</a>
-    <a href="/post/create/">Post</a>
-    <button class="logout">Logout</button>
-    <hr> </hr>
-    <section id="posts" class="posts"></section>
-    
+  <body class="body-custom">
+    <nav-bar></nav-bar>
+    <section id="posts" class="flex flex-wrap justify-center"></section>
+    <footer-section></footer-section>
   </body>
 </html>

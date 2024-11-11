@@ -1,44 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="/dist/styles.css" />
   </head>
-  <body>
-    <h1>Create Post</h1>
-    <form name="createPost">
-      <div>
-        <label for="title">Title</label>
+  <body class="body-custom">
+    <nav-bar></nav-bar>
+    <form id="createForm" class="form-custom" name="createPost">
+      <div class="flex justify-center text-xl text-white">
+        <h1 class="font-bold">Create Post</h1>
+      </div>
+      <div class="mb-5">
+        <label for="title" class="label-custom">Title</label>
         <input
           id="title"
           type="text"
           name="title"
           placeholder="Post Title"
           required
+          class="input-custom"
         />
       </div>
-      <div>
-        <label for="body">Body</label>
+
+      <div class="mb-5">
+        <label for="body" class="label-custom">Body</label>
         <textarea
           id="body"
           name="body"
           placeholder="Post Body"
           maxlength="200"
+          class="textarea-custom"
         ></textarea>
       </div>
-      <div>
-        <label for="tags">Tags</label>
-        <input id="tags" type="text" name="tags" />
-      </div>
-      <div>
-        <label for="media">Media</label>
-        <input id="media" type="text" name="media" />
-        <input id="mediaAlt" type="text" name="media-alt" />
+
+      <div class="mb-5">
+        <label for="tags" class="label-custom">Tags</label>
+        <input
+          id="tags"
+          type="text"
+          name="tags"
+          placeholder="e.g., travel, photography"
+          class="input-custom"
+        />
       </div>
 
-      <button>Create Post</button>
+      <div class="mb-5">
+        <label for="media" class="label-custom">Media</label>
+        <input
+          id="media"
+          type="text"
+          name="media"
+          placeholder="Media URL"
+          class="input-custom"
+        />
+      </div>
+
+      <div class="mb-5">
+        <label for="mediaAlt" class="label-custom">Media Alt Text</label>
+        <input
+          id="mediaAlt"
+          type="text"
+          name="media-alt"
+          placeholder="Description of the media"
+          class="input-custom"
+        />
+      </div>
+
+      <button type="submit" class="cta-custom">Create Post</button>
     </form>
+    <footer-section></footer-section>
   </body>
 </html>
