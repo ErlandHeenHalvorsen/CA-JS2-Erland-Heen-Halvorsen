@@ -1,6 +1,6 @@
 # Prototype of Social Media, using Noroff API and Tailwindcss
 
-[Netlify](erlhal-css-frameworks.netlify.app)
+[Netlify](https://erlhal-css-frameworks.netlify.app)
 
 ## To get going:
 
