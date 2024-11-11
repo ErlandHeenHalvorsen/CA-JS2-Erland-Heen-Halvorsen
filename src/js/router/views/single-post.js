@@ -36,7 +36,7 @@ async function renderPost() {
                             <span class="bg-gray-600 px-1 rounded-sm  w-fit truncate">${post.tags ? post.tags : ""}</span>
                         </div>
                         <div class="flex flex-wrap">
-                            <p>${post.body ? post.body : ""}</p>
+                            <p class="font-serif">${post.body ? post.body : ""}</p>
                     </div>
                 </a>
             </div>

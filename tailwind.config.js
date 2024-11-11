@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
-        serif: ["Merriweather", "serif"],
+        sans: ["Audiowide", "sans-serif"],
+        serif: ["Kanit", "serif"],
       },
     },
     screens: {
@@ -20,7 +20,6 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
-    extend: {},
   },
   plugins: [],
 };

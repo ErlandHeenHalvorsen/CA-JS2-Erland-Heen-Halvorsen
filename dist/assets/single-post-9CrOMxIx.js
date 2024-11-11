@@ -1,4 +1,4 @@
-import{a as o}from"./read-C_5gpF-W.js";import{N as l,F as i,a as d}from"./footer-9LuT4zIi.js";import"./headers-CvLIB_Db.js";customElements.define("nav-bar",l);customElements.define("footer-section",i);d();const e=new URLSearchParams(window.location.search),r=e.get("id");e.get("author");async function n(){const t=document.querySelector("#singlePost"),a=await o(r);let s=`
+import{a as o}from"./read-C_5gpF-W.js";import{N as l,F as i,a as r}from"./footer-9LuT4zIi.js";import"./headers-CvLIB_Db.js";customElements.define("nav-bar",l);customElements.define("footer-section",i);r();const e=new URLSearchParams(window.location.search),d=e.get("id");e.get("author");async function n(){const t=document.querySelector("#singlePost"),a=await o(d);let s=`
            <div class="flex flex-col p-1 m-6 rounded-md md:m-4 w-full max-w-md h-fit bg-gray-800 border border-gray-400 shadow-lg">
                 <a href="/post/single-post/?id=${a.id}" class="">
                     <div>
@@ -13,7 +13,7 @@ import{a as o}from"./read-C_5gpF-W.js";import{N as l,F as i,a as d}from"./footer
                             <span class="bg-gray-600 px-1 rounded-sm  w-fit truncate">${a.tags?a.tags:""}</span>
                         </div>
                         <div class="flex flex-wrap">
-                            <p>${a.body?a.body:""}</p>
+                            <p class="font-serif">${a.body?a.body:""}</p>
                     </div>
                 </a>
             </div>
